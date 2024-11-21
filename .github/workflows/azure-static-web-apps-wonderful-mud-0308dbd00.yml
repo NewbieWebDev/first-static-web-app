@@ -25,7 +25,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           app_location: "/" # Changed from "./src" to "/"
-          api_location: ""
+          api_location: "api"
           output_location: "/" # Changed from "./src" to "/"
           skip_app_build: true # Added this line
   close_pull_request_job:
