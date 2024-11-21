@@ -27,37 +27,34 @@
         </form>
     </section>
 </div>
-<script>
-    // Firebase configuration
-    var firebaseConfig = {
-        apiKey: "YOUR_API_KEY",
-        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-        projectId: "YOUR_PROJECT_ID",
-        storageBucket: "YOUR_PROJECT_ID.appspot.com",
-        messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-        appId: "YOUR_APP_ID",
-        measurementId: "YOUR_MEASUREMENT_ID"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
 
-    // Form submission handler
-    document.getElementById('feedback-form').addEventListener('submit', function(event) {
+<script>
+    document.getElementById('feedback-form').addEventListener('submit', async function(event) {
         event.preventDefault();
+        
         const name = document.getElementById('name').value;
         const feedback = document.getElementById('feedback').value;
-        db.collection("feedback").add({
-            name: name,
-            feedback: feedback,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
-        })
-        .then(() => {
-            alert("Thank you for your feedback, " + name + "!");
-        })
-        .catch((error) => {
-            console.error("Error writing document: ", error);
-        });
+        
+        try {
+            const response = await fetch('/api/submitFeedback', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, feedback })
+            });
+            
+            if (response.ok) {
+                alert("Thank you for your feedback, " + name + "!");
+                // Clear the form
+                document.getElementById('feedback-form').reset();
+            } else {
+                throw new Error('Failed to submit feedback');
+            }
+        } catch (error) {
+            alert('Error submitting feedback. Please try again.');
+            console.error('Error:', error);
+        }
     });
 </script>
 </body>
