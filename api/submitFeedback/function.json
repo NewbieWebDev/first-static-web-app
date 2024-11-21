@@ -16,7 +16,7 @@
         "type": "table",
         "name": "feedbackTable",
         "tableName": "Feedback",
-        "connection": "AzureWebJobsStorage",
+        "connection": "Azurestaticwebstore",
         "direction": "out"
       }
     ]

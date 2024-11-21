@@ -22,7 +22,7 @@ module.exports = async function (context, req) {
         };
 
         // Send email
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+        sgMail.setApiKey(process.env.sendgrid_api);
         const msg = {
             to: 'forcourses23@outlook.com',  // Your email
             from: 'forcourses23@outlook.com',  // Must be the verified sender
