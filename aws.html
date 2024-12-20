@@ -27,130 +27,32 @@
         <!--<a href="#portfolio"><i class="bi bi-trophy"></i> My portfolios</a>-->
         <a href="./Contact.html"><i class="bi bi-chat-dots-fill"></i> Get in touch!</a>
       </div>
-    <div class="animated-bg"></div>
-     <!-- About Section -->
-  <section id="about" class="section">
-    <div class="container">
-      <h1>Hi, I'm Cy</h1>
-      <p>
-        I’m an IT specialist passionate about solving tech problems. My expertise ranges from...ahh who am I kidding, it's best to see my work for yourself! This site is hosted on S3 with Route53. Unfortunately Cloudfront ain't doing me no favours! - as of <span id="currentDate"></span>
-  
-        <br>Outside of work, you’ll find me in tutorial hell trying to crack my head in coding! Currently pursuing courses in web dev and devops!
-      </p>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <h2>Projects</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Link to download</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Site hosting project with S3 + Route53</td>
+                <td><a href="./Docs/Hosting website from S3 with domain name from Godaddy.docx" download>Download</a></td>
+                <td>Domain name purchased from GoDaddy but nameservers managed by Route 53</td>
+              </tr>
+              <tr>
+                <td>Web deployment with Amplify + Github</td>
+                <td><a href="./Docs/Project_Plan.pdf" download>Download</a></td>
+                <td>Deploying websites a faster way using AWS Amplify via Github repository</td>
+              </tr>
       
-      <!-- Add Images Below -->
-      <div class="image-gallery">
-        <img src="./Badges/aws-certified-cloud-practitioner.png" alt="AWS cloud essentials badge" class="about-image">
-        <img src="./Badges/aws-certified-solutions-architect-associate.png" alt="AWS Solutions Architect Associate badge" class="about-image">
-        <img src="./Badges/comptia-network-ce-certification.1.png" alt="Comptia Network Plus badge" class="about-image">
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills & Technologies</h2>
-      <div class="skills-grid">
-        <div id="languageDiv"><strong>Languages:</strong> Python, JavaScript, HTML/CSS</div>
-        <div id="cloudDiv"><strong>Cloud Technologies:</strong>
-          <ul>
-            <li>AWS (VPC,S3,EC2,DynamoDB,Route53,ALB, Amplify, SES)</li>
-            <li>Azure (Azure backups, Webapps, Entra)</li>
-            <li>O365 administration</li>
-          </ul>
+            </tbody>
+          </table>
         </div>
-        <div id="virtualDiv"><strong>Virtualization:</strong> VMware, Virtualbox, Proxmox</div>
-        <div id="otherDiv"><strong>Other skills:</strong>
-          <ul>
-            <li>Desktop support</li>
-            <li>Networking</li>
-            <li>Windows automation</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
- <!-- Projects Section -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2>Projects</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Link to download</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Site hosting project with S3 + Route53</td>
-          <td><a href="./Docs/Hosting website from S3 with domain name from Godaddy.docx" download>Download</a></td>
-          <td>Domain name purchased from GoDaddy but nameservers managed by Route 53</td>
-        </tr>
-        <tr>
-          <td>Web deployment with Amplify + Github</td>
-          <td><a href="./Docs/Project_Plan.pdf" download>Download</a></td>
-          <td>Deploying websites a faster way using AWS Amplify via Github repository</td>
-        </tr>
-
-        <tr>
-          <td>Enabling web traffic insights for static web app in Azure</td>
-          <td><a href="./Docs/Enabling web traffic insight for your static website in Azure.docx" download>Download</a></td>
-          <td>In the downloaded zip folder contains the guide to enabling and viewing page visits for your static website hosted in Azure</td>
-        </tr>
-
-        <tr>
-          <td>Backing up Ubuntu Server VM to Azure (Windows host)</td>
-          <td><a href="./Docs/Backup your ubuntu server VM to Azure (Windows host).docx" download>Download</a></td>
-          <td>In this guide, we explore backing up our Virtual Box virtual disk to Azure Blob storage</td>
-        </tr>
-
-        <tr>
-          <td>Setting up SFTP server in Ubuntu VM </td>
-          <td><a href="./Docs/Setting up SFTP server in Ubuntu server VM and sharing files with windows host PC.docx" download>Download</a></td>
-          <td>In the attached guide, we sets up our Ubuntu server VM as an SFTP server.</td>
-        </tr>
-
-        <tr>
-          <td>Setting up Samba file share server with Ubuntu Server VM</td>
-          <td><a href="./Docs/Setting up SFTP server in Ubuntu server VM and sharing files with windows host PC.docx" download>Download</a></td>
-          <td>In the attached guide, we explore another method of file sharing via Samba file share.</td>
-        </tr>
-
-        <tr>
-          <td>Setting up NFS file share on Ubuntu Server VM </td>
-          <td><a href="./Docs/Setting up SFTP server in Ubuntu server VM and sharing files with windows host PC.docx" download>Download</a></td>
-          <td>In the attached guide, we explore another file share protocol using NFS and share files with a CentOS VM.</td>
-        </tr>
-
-        <tr>
-          <td>Setup MSO2016 in VM</td>
-          <td><a href="./Docs/Setup MS Office in VM.docx" download>Download</a></td>
-          <td>A starter guide in installing Microsoft Office in virtual machine</td>
-        </tr>
-
-        <tr>
-          <td>Setting up Docker Desktop</td>
-          <td><a href="./Docs/Setup Docker Desktop.docx" download>Download</a></td>
-          <td>A starter guide to setting up Docker on your desktop</td>
-        </tr>
-
-        <tr>
-          <td>Miss windows 10 context menu? here's how to revert</td>
-          <td><a href="./Docs/Restoring windows 10 right click menu in windows 11.docx" download>Download</a></td>
-          <td>In this guide we revert the right click menu in windows 11 back to windows 10 UI</td>
-        </tr>
-
-        <tr>
-          <td>This website's code</td>
-          <td><a href="./Docs/ForSharing.zip" download>Download</a></td>
-          <td>In the downloaded zip folder contains the skeletal structure of this website's code</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+      </section>
+</body>
